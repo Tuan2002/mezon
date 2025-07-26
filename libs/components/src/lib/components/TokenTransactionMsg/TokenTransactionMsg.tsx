@@ -24,8 +24,10 @@ const TokenTransactionMessage = ({ message }: ITokenTransactionMessageProps) => 
 					<div className="flex flex-col gap-2 flex-1">
 						<div className="font-semibold">{title}</div>
 						<div className="text-xs font-medium">
-							<span className="dark:text-blue-500 text-blue-600">Detail: </span>
-							<span className="font-regular text-theme-primary-active">{description}</span>
+							<div className="dark:text-blue-500 text-blue-600 mb-1">Transaction message: </div>
+							<div title={description} className="font-regular text-theme-primary-active overflow-hidden text-ellipsis line-clamp-2">
+								{description}
+							</div>
 						</div>
 					</div>
 				</div>
