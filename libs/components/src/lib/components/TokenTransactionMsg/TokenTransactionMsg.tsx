@@ -22,16 +22,12 @@ const TokenTransactionMessage = ({ message }: ITokenTransactionMessageProps) => 
 						<Icons.Transaction className="w-full dark:text-green-600 text-green-700" />
 					</div>
 					<div className="flex flex-col gap-2 flex-1">
-						<div className="font-semibold ">{title}</div>
-						<div className="text-xs font-medium ">
-							<span className="dark:text-blue-500 text-blue-600">Detail: </span>
-
-							<p
-								title={description}
-								className="font-semibold truncate w-full text-center text-theme-primary-active text-ellipsis whitespace-nowrap max-w-[200px]"
-							>
+						<div className="font-semibold">{title}</div>
+						<div className="text-xs font-medium">
+							<div className="dark:text-blue-500 text-blue-600 mb-1">Transaction message: </div>
+							<div title={description} className="font-regular text-theme-primary-active overflow-hidden text-ellipsis line-clamp-2">
 								{description}
-							</p>
+							</div>
 						</div>
 					</div>
 				</div>
